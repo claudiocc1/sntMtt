@@ -11,7 +11,7 @@ Usage:
     LorentzVector HH_p4    = dipho_p4 + ditau_p4;
     double mTauTau         = ditau_p4.M()
 ```
-The sntMTT function:
+The sntMtt function:
 ```
 //----------------------------------------------------------
 // Returns x1 and x2 such that the two taus vectors are
@@ -47,4 +47,12 @@ Algorithms 1 and 2 have resolution similar to FastMtt.
 
 Algorithm 3 improves the resolution by about 10-15% in the zero jet bin.
 
+Note: all algorithms have the same "fudge factor" as fastMtt.  This factor has not been tuned.
+
+```
+  // The likelihood is multiplied by a factor of (1/m)**(-power).
+  // This is equivalent to (x1*x2)**(power/2).
+  // The variable b is power/2 (in principle algorithm dependent)
+  double b[3] = {1.5, 1.5, 1.5};
+```
 
