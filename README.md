@@ -1,4 +1,4 @@
-# sntMtt
+
 Fitting tau tau mass in the context of HH->gamma gamma tau tau analysis
 
 Usage:
